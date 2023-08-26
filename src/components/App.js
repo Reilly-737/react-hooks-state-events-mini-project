@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import CategoryFilter from "./CategoryFilter";
 import NewTaskForm from "./NewTaskForm";
 import TaskList from "./TaskList";
+import Header from './Header';
+import About from "./About";
+import ArticleList from "./ArticleList";
 import { CATEGORIES } from "./constants";
 import { TASKS } from "./DailyTasks";
 
@@ -48,6 +51,12 @@ function App() {
         tasks={filteredTasks}
         onDelete={handleTaskDelete}
       />
+      <Header
+        name="Your Blog Name"/>
+      <About
+        image="https://via.placeholder.com/215"
+        about="About your blog..." />
+      <ArticleList articles={TASKS}/>
     </div>
   );
 }
